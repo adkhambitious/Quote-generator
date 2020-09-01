@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 1440px;
+    height: 1090px;
+    background-color: rgb(172, 187, 144);
+    display: flex;
+    flex-direction: column;
+}
+
+
+#random_block {
+    background-color: aqua;
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+
+.random_button {
+    background-color:yellow;
+    width: 20%;
+    height: 100%;
+    margin-left: auto;
+}
+
+#quote {
+    width: 100%;
+    height: 60%;
+    background-color: lightgreen;
+    
+}
+
+
+
+
+
+
+
+#authors_name {
+   width: 100%;
+   height: 20%; 
+   background-color: lightgray;
+}
