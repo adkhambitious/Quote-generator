@@ -14,6 +14,8 @@
     src: url(/fonts/Raleway/static/Raleway-Medium.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -31,14 +33,14 @@ body {
 
 
 #random_block {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 100%;
-    height: 7%;      /*1-st block*/
+    height: 70px;      /*1-st block*/
     display: flex;
 }
 
 .random_button {
-    background-color:yellow;
+    /* background-color:yellow; */
     width: 20%;
     height: 100%;
     margin-left: auto;
@@ -50,7 +52,7 @@ body {
 .random_button a div {
     width: 100%;
     height: 70%;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -68,11 +70,9 @@ body {
 }
 
 
-
 #quote {
     width: 100%;
-    height: 50%; /*2-nd block*/
-    background-color: lightgreen;
+    height: 500px; /*2-nd block*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,15 +83,15 @@ body {
     flex-direction: row;
     width: 45%;
     height: auto;
-    background-color: peru;
+    /* background-color: peru; */
 }
 
 .yellowline {
-    width: 30px;
+    width: 35px;
     height: auto;
     background-color: #F7DF94;;
+    /* background-color: #F7DF94; */
 }
-
 
 .phrase {
     font-size: 36px;
@@ -104,27 +104,21 @@ body {
 .phrase {
     min-width: 50%;
     height: auto;
-    background-color: gray;
+    /* background-color: gray; */
 }
-
-
-
-
-
 
 #authors_block {
    width: 100%;
    height: 20%; /*3-rd block*/
-   background-color: lightgray;
+   /* background-color: lightgray; */
    display: flex;
    justify-content: center;
 }
 
 .author {
     width: 43%;
-    height: 60%;
-    background-color: powderblue;
-    border: solid;
+    height: 120px;
+    /* background-color: powderblue; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -139,7 +133,7 @@ body {
 .author .name {
     width: 60%;
     height: 100%;
-    background-color: tan;
+    /* background-color: tan; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,7 +144,8 @@ body {
     font-family: "Raleway Bold";
     font-size: 24px;
     line-height: 28px;
-    color: #4F4F4F;
+    color: #828282;
+    /* color: #4F4F4F; */
 }
 
 .author .area {
@@ -163,7 +158,7 @@ body {
 .author .icon {
     width: 10%;
     height: 100%;
-    background-color: teal;
+    /* background-color: teal; */
     display: flex;
     margin-right: 30px;
     justify-content: center;
@@ -181,12 +176,13 @@ body {
 .creator {
     width: 20%;
     height: 4%;
-    background-color: hotpink;
+    /* background-color: hotpink; */
     display: flex;
     justify-content: center;
 }
 
 .creator p {
-    font-family: 'Raleway Bold';
-    font-size: medium;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #828282;
 }
