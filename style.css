@@ -32,8 +32,8 @@ body {
 .random {
     width: 40%;
     height: 70%;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: center;
     cursor: pointer;
 }
