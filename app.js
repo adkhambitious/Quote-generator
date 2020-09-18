@@ -27,7 +27,6 @@ randomButtonQuote.onclick = function() {
             displayQuote();
         });
 };
-
 function displayQuote() {
     oneQuoteReflection.innerHTML = `${phrase.quoteText}`;
     authorReflection.innerHTML = `${phrase.quoteAuthor}`;
@@ -35,6 +34,43 @@ function displayQuote() {
     encodeProcess(phrase.quoteAuthor);
 };
 
-document.querySelector('.creator').onclick = function() {
-    window.location.href = 'https://github.com/adkhambitious';
-};
+// ALL QUOTES OF A AUTHOR
+const allAuthorQuotes = [];
+// Selected elements
+const firstPhrase = document.querySelector('.one');
+const secondPhrase = document.querySelector('.two');
+const thirdPhrase = document.querySelector('.three');
+// Encode URI function 
+let api = '';
+let encodedLink = '';
+const encodeProcess = () => {
+    api = `https://quote-garden.herokuapp.com/api/v2/authors/${phrase.quoteAuthor}?page=1&limit=3`;
+    
+    encodedLink = encodeURI(api);
+}
+
+const getAllQuotes = document.querySelector('.author');
+
+getAllQuotes.onclick = function() {
+    fetch(encodedLink)
+        .then ((response) => {
+            let data = response.json();
+            return data;
+        })
+        .then ((data) => {
+            allAuthorQuotes[0] = data.quotes[0].quoteText;
+            allAuthorQuotes[1] = data.quotes[1].quoteText;
+            allAuthorQuotes[2] = data.quotes[2].quoteText;
+        })
+        .then (function() {
+            quotesReflection();
+        })
+}
+ 
+const quotesReflection = () => {
+    firstPhrase.innerHTML = allAuthorQuotes[0];
+    secondPhrase.innerHTML = allAuthorQuotes[1];
+    thirdPhrase.innerHTML = allAuthorQuotes[2];
+}
+
+
