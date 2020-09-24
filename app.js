@@ -40,6 +40,7 @@ const allAuthorQuotes = [];
 const firstPhrase = document.querySelector('.one');
 const secondPhrase = document.querySelector('.two');
 const thirdPhrase = document.querySelector('.three');
+const authorInitials = document.querySelector('.authorInitials');
 // Encode URI function 
 let api;
 let encodedLink;
@@ -55,23 +56,24 @@ getAllQuotes.onclick = function() {
     fetch(encodedLink)
         .then ((response) => {
             let data = response.json();
-            console.log(data);
             return data;
         })
         .then ((data) => {
             allAuthorQuotes[0] = data.quotes[0].quoteText;
             allAuthorQuotes[1] = data.quotes[1].quoteText;
             allAuthorQuotes[2] = data.quotes[2].quoteText;
+            allAuthorQuotes[3] = data.quotes[2].quoteAuthor;
         })
         .then (function() {
             quotesReflection();
         })
 }
- 
+console.log(allAuthorQuotes);
 const quotesReflection = () => {
     firstPhrase.innerHTML = allAuthorQuotes[0];
     secondPhrase.innerHTML = allAuthorQuotes[1];
     thirdPhrase.innerHTML = allAuthorQuotes[2];
+    authorInitials.innerHTML = `${allAuthorQuotes[3]}`;   
 }
 
 
