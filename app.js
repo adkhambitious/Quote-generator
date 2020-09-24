@@ -41,20 +41,21 @@ const firstPhrase = document.querySelector('.one');
 const secondPhrase = document.querySelector('.two');
 const thirdPhrase = document.querySelector('.three');
 // Encode URI function 
-let api = '';
-let encodedLink = '';
-const encodeProcess = () => {
+let api;
+let encodedLink;
+const encodeProcess = (arg) => {
     api = `https://quote-garden.herokuapp.com/api/v2/authors/${phrase.quoteAuthor}?page=1&limit=3`;
-    
     encodedLink = encodeURI(api);
 }
-
-const getAllQuotes = document.querySelector('.author');
+console.log(api); // undefined
+console.log(`encodedLink=${encodedLink}`); // undefined 
+const getAllQuotes = document.querySelector('.authorButton');
 
 getAllQuotes.onclick = function() {
     fetch(encodedLink)
         .then ((response) => {
             let data = response.json();
+            console.log(data);
             return data;
         })
         .then ((data) => {
@@ -74,3 +75,7 @@ const quotesReflection = () => {
 }
 
 
+getAllQuotes.addEventListener("click", function(){
+    document.querySelector(".allQuotesContainer").classList.remove("hidden");
+    document.querySelector(".oneQuoteContainer").classList.add("hidden");
+});

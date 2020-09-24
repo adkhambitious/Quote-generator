@@ -5,7 +5,7 @@ body {
     justify-content: center;
 }
 
-#container {
+.oneQuoteContainer {
     width: 1440px;
     height: 1090px;
     background-color: rgb(172, 187, 144);
@@ -100,7 +100,7 @@ body {
    justify-content: center;
 }
 
-.author {
+.authorButton {
     width: 43%;
     height: 120px;
     display: flex;
@@ -110,11 +110,11 @@ body {
     margin-left: 7%;
 }
 
-#authors_block a {
+#authorsInfo a {
     text-decoration: none;
 }
 
-.author .name {
+.authorButton .name {
     width: 60%;
     height: 100%;
     display: flex;
@@ -123,7 +123,7 @@ body {
     margin-left: 5%;
 }
 
-.author .initials {
+.authorButton .initials {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -131,7 +131,7 @@ body {
     color: #828282;
 }
 
-.author .area {
+.authorButton .area {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     color: #828282;
@@ -139,7 +139,7 @@ body {
     line-height: 16px;
 }
 
-.author .icon {
+.authorButton .icon {
     width: 10%;
     height: 100%;
     display: flex;
@@ -147,12 +147,12 @@ body {
     justify-content: center;
 }
 
-.author:hover {
+.authorButton:hover {
     background-color: #333333;
 }
 
-.author:hover .initials, 
-.author:hover .area {
+.authorButton:hover .initials, 
+.authorButton:hover .area {
     color: #F2F2F2;
 }
 
@@ -168,4 +168,133 @@ body {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     color: #828282;
+}
+
+.githubLogo {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    opacity: 0.4;
+}
+
+.allQuotesContainer {
+    width: 1440px;
+    height: 1624px;
+    background-color: rgb(172, 187, 144);
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#random_block {  /*1-st block*/
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+
+.random_button {
+    width: 20%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random {
+    width: 40%;
+    height: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.random:hover {
+    background-color: #c5b1b1;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+.random_button a p {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    color: #000000;
+    margin-right: 11px;
+}
+
+.random_button a {
+    text-decoration: none;
+}
+
+#authors_block {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+ }
+ 
+#authors_block a {
+    text-decoration: none;
+}
+ 
+.author {
+    min-width: auto;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 33%;
+}
+
+.author .initials {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+}
+
+.quote {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.union {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    height: auto;
+    margin-top: 140px;
+}
+
+.yellowline {
+    width: 35px;
+    height: auto;
+    background-color: #F7DF94;
+}
+
+
+.phrase {
+    font-size: 36px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    margin-left: 99px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.phrase {
+    min-width: 50%;
+    height: auto;
 }
