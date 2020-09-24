@@ -20,7 +20,7 @@ body {
     display: flex;
 }
 
-.random_button {
+.randomButton {
     width: 20%;
     height: 100%;
     margin-left: auto;
@@ -44,7 +44,7 @@ body {
     border-radius: 10px;
 }
 
-.random_button a p {
+.randomButton a p {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
@@ -52,7 +52,7 @@ body {
     margin-right: 11px;
 }
 
-.random_button a {
+.randomButton a {
     text-decoration: none;
 }
 
@@ -191,13 +191,13 @@ body {
     display: none;
 }
 
-#random_block {  /*1-st block*/
+#randomBlock {  /*1-st block*/
     width: 100%;
     height: 70px;
     display: flex;
 }
 
-.random_button {
+.randomButton {
     width: 20%;
     height: 100%;
     margin-left: auto;
@@ -221,7 +221,7 @@ body {
     border-radius: 10px;
 }
 
-.random_button a p {
+.randomButton a p {
     font-size: 18px;
     font-family: "Raleway", sans-serif;
     font-style: normal;
@@ -229,18 +229,18 @@ body {
     margin-right: 11px;
 }
 
-.random_button a {
+.randomButton a {
     text-decoration: none;
 }
 
-#authors_block {
+#authorsBlock {
     width: 100%;
     height: 10%;
     display: flex;
     align-items: center;
  }
  
-#authors_block a {
+#authorsBlock a {
     text-decoration: none;
 }
  
@@ -263,7 +263,7 @@ body {
 
 .quote {
     width: 100%;
-    height: 1000px;
+    min-height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,10 +275,10 @@ body {
     flex-direction: row;
     width: 700px;
     height: auto;
-    margin-top: 140px;
+    margin-top: 50px;
 }
 
-.yellowline {
+.yellowLine {
     width: 35px;
     height: auto;
     background-color: #F7DF94;
