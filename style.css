@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+@import url('base.css');
 
 body {
     display: flex;
@@ -16,7 +14,7 @@ body {
     align-items: center;
 }
 
-#random_block {  /*1-st block*/
+#random_block {
     width: 100%;
     height: 70px; 
     display: flex;
@@ -50,7 +48,7 @@ body {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    color: #000000;
+    color: #333333;
     margin-right: 11px;
 }
 
@@ -60,7 +58,7 @@ body {
 
 #quote {
     width: 100%;
-    height: 500px; /*2-nd block*/
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +91,7 @@ body {
     height: auto;
 }
 
-#authors_block {/*3-rd block*/
+#authors_block {
    width: 100%;
    height: 20%; 
    display: flex;
@@ -129,7 +127,6 @@ body {
     font-size: 24px;
     line-height: 28px;
     color: #828282;
-    /* color: #4F4F4F; */
 }
 
 .author .area {
@@ -143,7 +140,6 @@ body {
 .author .icon {
     width: 10%;
     height: 100%;
-    /* background-color: teal; */
     display: flex;
     margin-right: 30px;
     justify-content: center;
@@ -161,7 +157,6 @@ body {
 .creator {
     width: 20%;
     height: 4%;
-    /* background-color: hotpink; */
     display: flex;
     justify-content: center;
 }

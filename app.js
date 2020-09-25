@@ -1,16 +1,16 @@
 // Объект в котором будут данные по цитате
 const phrase = {};
 
-// Selected elements
+// Selected elements and naming of variables
 const oneQuoteReflection = document.querySelector('.p');
 const authorReflection = document.querySelector('.initials');
 const authorsArea = document.querySelector('.area');
-// Clicking on random button
 
-// Naming of variables
-let getRandomQuote = document.querySelector('.random');
+// Clicking on random button
+let randomButtonQuote = document.querySelector('.random');
+
 // Getting data from API-provider
-getRandomQuote.onclick = function() {
+randomButtonQuote.onclick = function() {
     const api = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
     fetch(api)
         .then((response) => {
@@ -27,7 +27,7 @@ getRandomQuote.onclick = function() {
             displayQuote();
         });
 };
-console.log(phrase); // 3-rd
+
 function displayQuote() {
     oneQuoteReflection.innerHTML = `${phrase.quoteText}`;
     authorReflection.innerHTML = `${phrase.quoteAuthor}`;
