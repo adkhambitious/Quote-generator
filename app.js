@@ -36,11 +36,13 @@ function displayQuote() {
 
 // ALL QUOTES OF A AUTHOR
 const allAuthorQuotes = [];
+
 // Selected elements
 const firstPhrase = document.querySelector('.one');
 const secondPhrase = document.querySelector('.two');
 const thirdPhrase = document.querySelector('.three');
 const authorInitials = document.querySelector('.authorInitials');
+
 // Encode URI function 
 let api;
 let encodedLink;
@@ -48,11 +50,10 @@ const encodeProcess = (arg) => {
     api = `https://quote-garden.herokuapp.com/api/v2/authors/${phrase.quoteAuthor}?page=1&limit=3`;
     encodedLink = encodeURI(api);
 }
-console.log(api); // undefined
-console.log(`encodedLink=${encodedLink}`); // undefined 
-const getAllQuotes = document.querySelector('.authorButton');
 
-getAllQuotes.onclick = function() {
+const allQuotesButton = document.querySelector('.authorButton');
+
+allQuotesButton.onclick = function() {
     fetch(encodedLink)
         .then ((response) => {
             let data = response.json();
@@ -68,7 +69,7 @@ getAllQuotes.onclick = function() {
             quotesReflection();
         })
 }
-console.log(allAuthorQuotes);
+
 const quotesReflection = () => {
     firstPhrase.innerHTML = allAuthorQuotes[0];
     secondPhrase.innerHTML = allAuthorQuotes[1];
@@ -76,8 +77,7 @@ const quotesReflection = () => {
     authorInitials.innerHTML = `${allAuthorQuotes[3]}`;   
 }
 
-
-getAllQuotes.addEventListener("click", function(){
+allQuotesButton.addEventListener("click", function(){
     document.querySelector(".allQuotesContainer").classList.remove("hidden");
     document.querySelector(".oneQuoteContainer").classList.add("hidden");
 });

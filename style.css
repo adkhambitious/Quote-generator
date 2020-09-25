@@ -8,8 +8,7 @@ body {
 .oneQuoteContainer {
     width: 1440px;
     height: 1090px;
-    background-color: #FFFFFF;
-    ;
+    background-color: rgb(172, 187, 144);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,7 +180,7 @@ body {
 .allQuotesContainer {
     width: 1440px;
     height: 1624px;
-    background-color: #FFFFFF;
+    background-color: rgb(172, 187, 144);
     ;
     display: flex;
     
@@ -273,18 +272,12 @@ body {
  
 .union {
     display: flex;
+    position: relative;
     flex-direction: row;
     width: 700px;
     height: auto;
     margin-top: 50px;
 }
-
-.allQuoteYellowLines {
-    width: 35px;
-    height: auto;
-    background-color: #F7DF94;
-}
-
 
 .phrase {
     font-size: 36px;
