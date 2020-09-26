@@ -14,12 +14,10 @@ getRandomQuote.onclick = function() {
     const api = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
     fetch(api)
         .then((response) => {
-            let data = response.json();
-            console.log('Привет!') // 1-st
+            let data = response.json();// 1-st
             return data;
         })
-        .then((data) => {
-            console.log(data); // 2-nd
+        .then((data) => {// 2-nd
             phrase.id = data.id;
             phrase.quoteText = data.quote.quoteText;
             phrase.quoteAuthor = data.quote.quoteAuthor;
@@ -29,12 +27,14 @@ getRandomQuote.onclick = function() {
             displayQuote();
         });
 };
-console.log(phrase); // 3 -rd
+console.log(phrase); // 3-rd
 function displayQuote() {
     oneQuoteReflection.innerHTML = `${phrase.quoteText}`;
     authorReflection.innerHTML = `${phrase.quoteAuthor}`;
-    authorsArea.innerHTML = `${phrase.field}`
+    authorsArea.innerHTML = `${phrase.field}`;
+    encodeProcess(phrase.quoteAuthor);
 };
 
-
-
+document.querySelector('.creator').onclick = function() {
+    window.location.href = 'https://github.com/adkhambitious';
+};
