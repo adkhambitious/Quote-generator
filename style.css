@@ -65,6 +65,7 @@ body {
 }
  
 .union {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 45%;
@@ -72,8 +73,9 @@ body {
 }
 
 .yellowline {
-    width: 35px;
-    height: auto;
+    position: absolute;
+    width: 8px;
+    height: 100%;
     background-color: #F7DF94;
 }
 
@@ -156,12 +158,12 @@ body {
 
 .creator {
     width: 20%;
-    height: 4%;
+    height: 50px;
     display: flex;
     justify-content: center;
 }
 
-.creator p {
+.adkhamB {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     color: #828282;

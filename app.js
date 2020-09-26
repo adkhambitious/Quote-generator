@@ -2,7 +2,7 @@
 const phrase = {};
 
 // Selected elements and naming of variables
-const oneQuoteReflection = document.querySelector('.p');
+const oneQuoteReflection = document.querySelector('.quoteContent');
 const authorReflection = document.querySelector('.initials');
 const authorsArea = document.querySelector('.area');
 
