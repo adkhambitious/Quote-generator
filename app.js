@@ -2,12 +2,12 @@
 const phrase = {};
 
 // Selected elements and naming of variables
-const oneQuoteReflection = document.querySelector('.quoteContent');
-const authorReflection = document.querySelector('.initials');
-const authorsArea = document.querySelector('.area');
+const oneQuoteReflection = document.querySelector('.js-mainQuote');
+const authorReflection = document.querySelector('.js-initials');
+const authorsArea = document.querySelector('.js-area');
 
 // Clicking on random button
-let randomButtonQuote = document.querySelector('.random');
+let randomButtonQuote = document.querySelector('.js-random');
 
 // Getting data from API-provider
 randomButtonQuote.onclick = function() {
@@ -38,10 +38,10 @@ function displayQuote() {
 const allAuthorQuotes = [];
 
 // Selected elements
-const firstPhrase = document.querySelector('.one');
-const secondPhrase = document.querySelector('.two');
-const thirdPhrase = document.querySelector('.three');
-const authorInitials = document.querySelector('.authorInitials');
+const firstPhrase = document.querySelector('.js-firstPhrase');
+const secondPhrase = document.querySelector('.js-secondPhrase');
+const thirdPhrase = document.querySelector('.js-thirdPhrase');
+const authorInitials = document.querySelector('.js-authorInitials');
 
 // Encode URI function 
 let api;
@@ -51,7 +51,7 @@ const encodeProcess = (arg) => {
     encodedLink = encodeURI(api);
 }
 
-const allQuotesButton = document.querySelector('.authorButton');
+const allQuotesButton = document.querySelector('.js-authorButton');
 
 allQuotesButton.onclick = function() {
     fetch(encodedLink)
@@ -66,11 +66,11 @@ allQuotesButton.onclick = function() {
             allAuthorQuotes[3] = data.quotes[2].quoteAuthor;
         })
         .then (function() {
-            quotesReflection();
+            displayAllQuotes();
         })
 }
 
-const quotesReflection = () => {
+const displayAllQuotes = () => {
     firstPhrase.innerHTML = allAuthorQuotes[0];
     secondPhrase.innerHTML = allAuthorQuotes[1];
     thirdPhrase.innerHTML = allAuthorQuotes[2];
