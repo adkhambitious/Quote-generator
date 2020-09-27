@@ -1,3 +1,5 @@
+@import url('base.css');
+
 body {
     display: flex;
     justify-content: center;
@@ -92,6 +94,7 @@ body {
 }
  
 .union {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 700px;
@@ -100,11 +103,11 @@ body {
 }
 
 .yellowline {
-    width: 35px;
-    height: auto;
+    position: absolute;
+    width: 8px;
+    height: 100%;
     background-color: #F7DF94;
 }
-
 
 .phrase {
     font-size: 36px;
