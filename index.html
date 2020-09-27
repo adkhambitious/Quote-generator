@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Quotes of Bill Gates, Tony Robbins, Lana Del Rey and so on.">
     <title>Quote generator for healthy mind</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="random_block">
-            <div class="random_button">
-                <a class="random" href="#">  
+    <div class="oneQuoteContainer">
+        <div id="randomBlock">
+            <div class="randomButton">
+                <a class="random js-random" href="#">
                     <p>random</p>
                     <img src="/icons/autorenew-24px.svg" alt="">
                 </a>
@@ -20,9 +20,55 @@
         </div>
         <div id="quote">
             <div class="union">
-                <div class="yellowline"></div>
+                <div class="yellowLine"></div>
                 <div class="phrase">
-                    <p class="quoteContent">“The first rule of any technology
+                    <p class="mainQuote js-mainQuote">“The first rule of any technology
+                        used in a business is that
+                        automation applied to an efficient
+                        operation will magnify the efficiency.
+                        The second is that automation
+                        applied to an inefficient operation
+                        will magnify the inefficiency.”
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="authorsInfo">
+            <a href="#" class="authorButton js-authorButton">
+                <div class="name">
+                        <p class="initials js-initials">Bill Gates</p>
+                        <p class="area js-area">business</p>
+                </div>
+                <div class="icon">
+                        <img src="/icons/arrow_right_alt-24px.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <a href="https://github.com/adkhambitious" class="creator"><p class="adkhamB">Adkham Badalbaev</br>monterey-bay@mail.ru</p><img class="githubLogo" src="/icons/githubLogo.png" alt="githubLogo"></a>
+    </div>
+    
+    
+    <div class="allQuotesContainer hidden">
+        <div id="randomBlock">
+            <div class="randomButton">
+                <a class="random" href="#">
+                    <p>random</p>
+                    <img src="/icons/autorenew-24px.svg" alt="">
+                </a>
+            </div>    
+        </div>
+        <div id="authorsBlock">
+            <a href="#" class="author">
+                <p class="authorInitials js-authorInitials">Bill Gates</p>
+            </a>
+        </div>
+        
+        <div class="quote">
+            <div class="union">
+                <div class="yellowLine"></div>
+                <div class="phrase">
+                    <p class="firstPhrase js-firstPhrase">
+                        “The first rule of any technology
                         used in a business is that
                         automation applied to an efficient
                         operation will magnify the efficiency.
@@ -32,20 +78,30 @@
                     </p>
                 </div>
             </div>    
-        </div>
-        <div id="authors_block">
-            <a href="#" class="author">
-                <div class="name">
-                        <p class="initials">Bill Gates</p>
-                        <p class="area">business</p>
+            <div class="union">
+                <div class="yellowLine"></div>
+                <div class="phrase">
+                    <p class="secondPhrase js-secondPhrase">
+                        “We always overestimate the
+                        change that will occur in the next
+                        two years and underestimate the
+                        change that will occur in the next
+                        ten. Don't let yourself be lulled into
+                        inaction.”
+                    </p>
                 </div>
-                <div class="icon">
-                        <img src="/icons/arrow_right_alt-24px.svg" alt="">
+            </div>
+            <div class="union">
+                <div class="yellowLine"></div>
+                <div class="phrase">
+                    <p class="thirdPhrase js-thirdPhrase">
+                        "Climate change is a terrible
+                        problem, and it absolutely needs to
+                        be solved. It deserves to be a huge
+                        priority."
+                    </p>
                 </div>
-            </a>
-        </div>
-        <div class="creator">
-            <p class="adkhamB">Adkham Badalbaev</br>monterey-bay@mail.ru</p>
+            </div>
         </div>
     </div>
 <script src="app.js">

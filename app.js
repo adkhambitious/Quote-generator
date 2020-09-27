@@ -2,12 +2,12 @@
 const phrase = {};
 
 // Selected elements and naming of variables
-const oneQuoteReflection = document.querySelector('.quoteContent');
-const authorReflection = document.querySelector('.initials');
-const authorsArea = document.querySelector('.area');
+const oneQuoteReflection = document.querySelector('.js-mainQuote');
+const authorReflection = document.querySelector('.js-initials');
+const authorsArea = document.querySelector('.js-area');
 
 // Clicking on random button
-let randomButtonQuote = document.querySelector('.random');
+let randomButtonQuote = document.querySelector('.js-random');
 
 // Getting data from API-provider
 randomButtonQuote.onclick = function() {
@@ -27,7 +27,6 @@ randomButtonQuote.onclick = function() {
             displayQuote();
         });
 };
-
 function displayQuote() {
     oneQuoteReflection.innerHTML = `${phrase.quoteText}`;
     authorReflection.innerHTML = `${phrase.quoteAuthor}`;
@@ -35,6 +34,50 @@ function displayQuote() {
     encodeProcess(phrase.quoteAuthor);
 };
 
-document.querySelector('.creator').onclick = function() {
-    window.location.href = 'https://github.com/adkhambitious';
-};
+// ALL QUOTES OF A AUTHOR
+const allAuthorQuotes = [];
+
+// Selected elements
+const firstPhrase = document.querySelector('.js-firstPhrase');
+const secondPhrase = document.querySelector('.js-secondPhrase');
+const thirdPhrase = document.querySelector('.js-thirdPhrase');
+const authorInitials = document.querySelector('.js-authorInitials');
+
+// Encode URI function 
+let api;
+let encodedLink;
+const encodeProcess = (arg) => {
+    api = `https://quote-garden.herokuapp.com/api/v2/authors/${phrase.quoteAuthor}?page=1&limit=3`;
+    encodedLink = encodeURI(api);
+}
+
+const allQuotesButton = document.querySelector('.js-authorButton');
+
+allQuotesButton.onclick = function() {
+    fetch(encodedLink)
+        .then ((response) => {
+            let data = response.json();
+            return data;
+        })
+        .then ((data) => {
+            allAuthorQuotes[0] = data.quotes[0].quoteText;
+            allAuthorQuotes[1] = data.quotes[1].quoteText;
+            allAuthorQuotes[2] = data.quotes[2].quoteText;
+            allAuthorQuotes[3] = data.quotes[2].quoteAuthor;
+        })
+        .then (function() {
+            displayAllQuotes();
+        })
+}
+
+const displayAllQuotes = () => {
+    firstPhrase.innerHTML = allAuthorQuotes[0];
+    secondPhrase.innerHTML = allAuthorQuotes[1];
+    thirdPhrase.innerHTML = allAuthorQuotes[2];
+    authorInitials.innerHTML = `${allAuthorQuotes[3]}`;   
+}
+
+allQuotesButton.addEventListener("click", function(){
+    document.querySelector(".allQuotesContainer").classList.remove("hidden");
+    document.querySelector(".oneQuoteContainer").classList.add("hidden");
+});
