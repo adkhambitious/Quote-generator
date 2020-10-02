@@ -30,12 +30,16 @@ body {
 }
 
 .random {
-    width: 40%;
-    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 7px;
+}
+
+.autorenewIcon {
+    width: 20px;
+    height: auto;
 }
 
 .random:hover {
@@ -44,12 +48,12 @@ body {
     border-radius: 10px;
 }
 
-.randomButton a p {
+.baseRandomButton {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     color: #333333;
-    margin-right: 11px;
+    margin-right: 3px;
 }
 
 .randomButton a {
@@ -72,7 +76,7 @@ body {
     height: auto;
 }
 
-.yellowline {
+.yellowLine {
     position: absolute;
     width: 8px;
     height: 100%;
@@ -203,25 +207,16 @@ body {
     align-items: center;
 }
 
-.random {
-    width: 40%;
-    height: 70%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
 .random:hover {
     border: 1px solid #333333;
     border-radius: 10px;
 }
 
-.randomButton a p {
+.randomClick {
     font-size: 18px;
     font-family: "Raleway", sans-serif;
     font-style: normal;
-    color: #000000;
+    color: #333333;
     margin-right: 11px;
 }
 
@@ -249,7 +244,7 @@ body {
     margin-left: 33%;
 }
 
-.author .authorInitials {
+.authorInitials {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -282,9 +277,119 @@ body {
     margin-left: 99px;
     font-weight: 500;
     color: #000000;
-}
-
-.phrase {
     min-width: 50%;
     height: auto;
+}
+
+@media screen and (max-width: 1440px) {
+    .baseRandomButton {
+        font-size: 15px;
+        margin-right: 3px;
+    }
+    .creator {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .oneQuoteContainer {
+        background-color: #c0bf8b;
+    }
+    .baseRandomButton {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+    .randomButton {
+        width: 30%;
+    }
+    .union {
+        width: 500px;
+    }
+    .phrase {
+        font-size: 26px;
+        margin-left: 75px;
+    }
+        
+    .random img {
+        width: 20%;
+        height: auto;
+    }
+    .random {
+        display: flex;        
+    }
+    .authorButton {
+        width: 400px;
+        height: 80px;
+    }
+    .authorButton .initials, .authorInitials {
+        font-size: 18px;
+    }
+    .authorButton .area {
+        font-size: 11px;
+    }
+    .creator {
+        width: 190px;
+        height: 35px;
+        display: flex;
+    }
+    .adkhamB {
+        font-size: 12px;
+    }
+    .githubLogo {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 767px) {
+    /* стили для средних планшетов - начало */
+    .union {
+        width: 400px;
+    }
+    .phrase {
+        font-size: 22px;
+        margin-left: 50px;
+    }
+    .baseRandomButton {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+    
+    .randomButton {
+        width: 40%;
+    }
+    
+}
+    
+@media screen and (max-width: 479px) {
+    /* стили для телефонов - начало */
+    .union {
+        width: 250px;
+        margin-top: 40px;
+    }
+    .phrase {
+        font-size: 15px;
+        margin-left: 30px;
+    }
+    .baseRandomButton, .randomClick {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+    .randomButton {
+        width: 40%;
+    }
+    .authorButton {
+        width: 300px;
+        height: 70px;
+    }
+    .authorInitials {
+        font-size: 18px;
+    }
+    #quote {
+        height: 300px;
+    }
+    #authorsBlock {
+       height: 50px; 
+    }
+    
 }
