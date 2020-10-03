@@ -10,7 +10,7 @@ const authorsArea = document.querySelector('.js-area');
 let randomButtonQuote = document.querySelector('.js-random');
 
 // Getting data from API-provider
-randomButtonQuote.onclick = function() {
+randomButtonQuote.onclick = function startRandom() {
     const api = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
     fetch(api)
         .then((response) => {
@@ -81,3 +81,10 @@ allQuotesButton.addEventListener("click", function(){
     document.querySelector(".allQuotesContainer").classList.remove("hidden");
     document.querySelector(".oneQuoteContainer").classList.add("hidden");
 });
+
+
+document.querySelector('.js-randomClick').onclick = function() {
+    document.querySelector(".allQuotesContainer").classList.add("hidden");
+    document.querySelector(".oneQuoteContainer").classList.remove("hidden");
+    startRandom();
+}
