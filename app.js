@@ -10,7 +10,7 @@ const authorsArea = document.querySelector('.js-area');
 let randomButtonQuote = document.querySelector('.js-random');
 
 // Getting data from API-provider
-randomButtonQuote.onclick = function startRandom() {
+function startRandom() {
     const api = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
     fetch(api)
         .then((response) => {
@@ -27,12 +27,15 @@ randomButtonQuote.onclick = function startRandom() {
             displayQuote();
         });
 };
+
 function displayQuote() {
     oneQuoteReflection.innerHTML = `${phrase.quoteText}`;
     authorReflection.innerHTML = `${phrase.quoteAuthor}`;
     authorsArea.innerHTML = `${phrase.field}`;
     encodeProcess(phrase.quoteAuthor);
 };
+
+randomButtonQuote.onclick = startRandom;
 
 // ALL QUOTES OF A AUTHOR
 const allAuthorQuotes = [];
@@ -88,3 +91,4 @@ document.querySelector('.js-randomClick').onclick = function() {
     document.querySelector(".oneQuoteContainer").classList.remove("hidden");
     startRandom();
 }
+
