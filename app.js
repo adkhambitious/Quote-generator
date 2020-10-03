@@ -25,6 +25,7 @@ function startRandom() {
         })
         .then(function() {
             displayQuote();
+            getAllQuotes();
         });
 };
 
@@ -56,7 +57,7 @@ const encodeProcess = (arg) => {
 
 const allQuotesButton = document.querySelector('.js-authorButton');
 
-allQuotesButton.onclick = function() {
+function getAllQuotes() {
     fetch(encodedLink)
         .then ((response) => {
             let data = response.json();
@@ -79,6 +80,8 @@ const displayAllQuotes = () => {
     thirdPhrase.innerHTML = allAuthorQuotes[2];
     authorInitials.innerHTML = `${allAuthorQuotes[3]}`;   
 }
+
+allQuotesButton.onclick = getAllQuotes;
 
 allQuotesButton.addEventListener("click", function(){
     document.querySelector(".allQuotesContainer").classList.remove("hidden");
